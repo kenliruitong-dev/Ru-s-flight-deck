@@ -1,35 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rui's Flight Deck | About</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header glass">
-      <nav class="nav" aria-label="Main navigation">
-        <a class="brand" href="index.html"><span class="brand-mark">✈</span><span class="brand-name">Rui's Flight Deck</span></a>
-        <div class="nav-links"><a href="index.html">Home</a><a href="episodes.html">Episodes</a></div>
-      </nav>
-    </header>
+# Images Folder
 
-    <main class="page page-full">
-      <section class="section page-panel two-col reveal" aria-labelledby="about-title">
-        <div>
-          <p class="eyebrow">Meet your host</p>
-          <h1 id="about-title" class="title-xl">Rui</h1>
-          <p class="hero-copy">Experienced senior pilot and university president serving the aviation community with purpose and faith.</p>
-        </div>
-        <ul id="mission" class="check-list">
-          <li>Conversations with aviation industry professionals</li>
-          <li>Filmed in airport environments: hangars and offices</li>
-          <li>Mission to open doors for future aviators</li>
-        </ul>
-      </section>
-    </main>
+Store website images here.
 
-    <footer class="site-footer glass" aria-label="Footer information"><div class="footer-slot"></div><div class="footer-slot"></div><div class="footer-slot"></div></footer>
-    <script src="site.js"></script>
-  </body>
-</html>
+Required for current design:
+- `episode-thumb-01.jpg` ← place your cockpit photo here (this is the page background)
+
+Optional:
+- `hero-plane.jpg`
+- `host-portrait.jpg`
+- `episode-thumb-01.jpg`
