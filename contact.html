@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contact Rui's Flight Deck - Send us your inquiries and messages." />
+    <title>Rui's Flight Deck | Contact</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .contact-page {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 40px;
+      }
+
+      .contact-page h1 {
+        font-size: 3.5rem;
+        font-weight: 900;
+        color: var(--text-black);
+        text-align: center;
+        margin-bottom: 12px;
+        text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+      }
+
+      .contact-page .intro {
+        text-align: center;
+        color: var(--text-black);
+        margin-bottom: 40px;
+        font-size: 1rem;
+        text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);
+      }
+
+      .contact-form {
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(5px);
+        border: 2px solid var(--text-white);
+        border-radius: 16px;
+        padding: 40px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      }
+
+      .form-group {
+        margin-bottom: 24px;
+      }
+
+      .form-group label {
+        display: block;
+        color: var(--text-white);
+        font-weight: 700;
+        margin-bottom: 8px;
+        font-size: 1rem;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 12px 16px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.1);
+        color: var(--text-white);
+        font-family: inherit;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+      }
+
+      .form-group input::placeholder,
+      .form-group textarea::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: rgba(255, 255, 255, 0.6);
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 0 0 3px rgba(74, 158, 255, 0.2);
+      }
+
+      .form-group textarea {
+        resize: vertical;
+        min-height: 150px;
+      }
+
+      .submit-btn {
+        width: 100%;
+        padding: 14px 24px;
+        background: linear-gradient(135deg, #4a9eff 0%, #7bb8ff 100%);
+        color: white;
+        font-weight: 700;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(74, 158, 255, 0.4);
+      }
+
+      .submit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(74, 158, 255, 0.6);
+      }
+
+      .submit-btn:active {
+        transform: translateY(0);
+      }
+
+      .success-message {
+        text-align: center;
+        color: #4a9eff;
+        margin-top: 20px;
+        font-weight: 600;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="sign-up-link" href="index.html">← Back to Home</a>
+
+        <div class="nav-links" role="menubar" aria-label="Top navigation">
+          <div class="dropdown" role="none">
+            <button class="dropbtn" aria-haspopup="true" aria-expanded="false">About us</button>
+            <div class="dropdown-content" role="menu">
+              <a href="about.html" role="menuitem">Host Bio</a>
+              <a href="about.html#mission" role="menuitem">Mission</a>
+            </div>
+          </div>
+
+          <div class="dropdown" role="none">
+            <button class="dropbtn" aria-haspopup="true" aria-expanded="false">Subscribe</button>
+            <div class="dropdown-content" role="menu">
+              <a href="index.html#featured" role="menuitem">Featured Launch</a>
+              <a href="episodes.html" role="menuitem">Episode Feed (Soon)</a>
+            </div>
+          </div>
+
+          <div class="dropdown" role="none">
+            <button class="dropbtn" aria-haspopup="true" aria-expanded="false">Contact</button>
+            <div class="dropdown-content" role="menu">
+              <a href="contact.html" role="menuitem">Send Message</a>
+              <a href="contact.html" role="menuitem">Inquiries</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page page-full">
+      <div class="contact-page">
+        <h1>Get In Touch</h1>
+        <p class="intro">Have a question or inquiry? Fill out the form below and we'll get back to you as soon as possible.</p>
+
+        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your full name">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="your@email.com">
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required placeholder="What is this about?">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required placeholder="Write your message here..."></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Send Message</button>
+          <p class="success-message">✅ Message sent successfully! We'll reply soon.</p>
+        </form>
+      </div>
+    </main>
+
+    <footer class="site-footer" aria-label="Footer information">
+      <div class="footer-content">
+        <h3>Rui's Flight Deck</h3>
+        <p>Aviation journey from the cockpit, hangar, and academy — sharing real stories, leadership, and faith in God.</p>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="episodes.html">Episodes</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Get In Touch</h3>
+        <div class="contact-info">
+          <p>📧 <a href="mailto:ruisflightdeck@gmail.com">ruisflightdeck@gmail.com</a></p>
+          <p>📱 <a href="tel:7203006781">720 300 6781</a></p>
+        </div>
+        <a href="contact.html" class="contact-btn">Contact Us</a>
+      </div>
+
+      <div class="footer-social">
+        <h3>Connect</h3>
+        <p>Follow us on social media for updates on new episodes and aviation content.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="Instagram">📷</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 Rui's Flight Deck. All rights reserved.</p>
+    </div>
+
+    <script src="site.js"></script>
+  </body>
+</html>
