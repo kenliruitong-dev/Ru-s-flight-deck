@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= pageTitle %></title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header glass">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="/"><span class="brand-mark">✈</span><span class="brand-name">Rui's Flight Deck</span></a>
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="/episodes">Episodes</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page page-full">
+      <section class="section page-panel two-col reveal" aria-labelledby="about-title">
+        <div>
+          <p class="eyebrow"><%= eyebrow %></p>
+          <h1 id="about-title" class="title-xl"><%= heading %></h1>
+          <p class="hero-copy"><%= heroCopy %></p>
+        </div>
+        <ul id="mission" class="check-list">
+          <% mission.forEach(function(item){ %>
+            <li><%= item %></li>
+          <% }); %>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer glass" aria-label="Footer information">
+      <div class="footer-slot"></div>
+      <div class="footer-slot"></div>
+      <div class="footer-slot"></div>
+    </footer>
+    <script src="/site.js"></script>
+  </body>
+</html>
